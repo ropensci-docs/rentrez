@@ -1,0 +1,12 @@
+{
+  "commit": {
+    "commit": "a225f2138708a4d4d547e2dcab3e6641c8a891a1",
+    "author": "dwinter <david.winter@gmail.com>",
+    "time": "2020-11-10 22:53:08",
+    "files": 1,
+    "merge": true,
+    "message": "Merge github issue template\n"
+  },
+  "repo": "https://github.com/ropensci/rentrez",
+  "pkg": "rentrez"
+}
