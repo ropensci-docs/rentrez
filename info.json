@@ -1,0 +1,13 @@
+{
+  "commit": {
+    "commit": "f33c6e73f75bd2604aa981ef14e2006aab096ab9",
+    "author": "Samuel Bharti <samuelbharti.io@gmail.com>",
+    "time": "2026-07-20T17:38:58Z",
+    "files": 3,
+    "merge": true,
+    "message": "Merge pull request #211 from ropensci/fix-small-typos\n\nFix stray characters in two error messages and an .Rbuildignore pattern"
+  },
+  "repo": "https://github.com/ropensci/rentrez",
+  "pkg": "rentrez",
+  "time": "2026-08-19T05:12:30Z"
+}
