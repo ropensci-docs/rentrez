@@ -1,0 +1,4 @@
+# License
+
+    YEAR: 2012-2018
+    COPYRIGHT HOLDER: David Winter
