@@ -1,0 +1,13 @@
+{
+  "commit": {
+    "commit": "0595183cfebca515469bdf8bb519c8b810664db4",
+    "author": "Samuel Bharti <samuelbharti.io@gmail.com>",
+    "time": "2026-09-22T23:35:22Z",
+    "files": 3,
+    "merge": false,
+    "message": "fix: stop the by_id elink warning from naming valid IDs\n\nWhen entrez_link(by_id = TRUE) got fewer results than IDs sent, its\nwarning listed every ID, valid ones included, with a stray separator\nafter each. It picked the IDs with id %in% res, and res is a list of\nelink objects, so nothing ever matched.\n\nThe warning now gives counts, as in \"NCBI returned results for 1 of the\n2 IDs requested\", and no longer fires when NCBI returns more results\nthan IDs. It does not name IDs because the reply cannot show which ones\nwent unanswered. An accession comes back as a GI number, and only the\nneighbor commands repeat the ID in an IdList. Matching IDs against\nIdList, checked live, warns about every ID for acheck, ncheck, lcheck,\nllinks and prlinks, and for accessions.\n\nTwo offline tests in test_link_errors.r use LinkSets trimmed from real\nreplies for accessions, ncheck and llinks. One shows a full reply of\neach shape raises no warning, and the other checks the message on a\nshort reply.\n"
+  },
+  "repo": "https://github.com/ropensci/rentrez",
+  "pkg": "rentrez",
+  "time": "2026-09-23T00:46:07Z"
+}
