@@ -1,0 +1,13 @@
+{
+  "commit": {
+    "commit": "68601da9bc7de81ce130e6434ba1b6248572e7e9",
+    "author": "Samuel Bharti <samuelbharti.io@gmail.com>",
+    "time": "2026-10-10T13:36:36Z",
+    "files": 2,
+    "merge": false,
+    "message": "docs: fix moved and plain-http links in the README\n\nurlchecker flagged six moved links in the README. It suggested\nhttps://ropensci.org/contact.html for the rOpenSci contact page, but\nthat returns 404, so the link now points at\nhttps://ropensci.org/contact/. Five more plain-http links, in the badges\nand two images, move to https as well, and urlchecker now reports every\nURL as correct.\n\nThe sentence calling rentrez part of the fulltext suite is gone, since\nropensci/fulltext is archived.\n\nREADME.md and README.Rmd get the same edits by hand. Knitting the Rmd\nwould rerun 28 live NCBI calls, including the popset walkthrough that\n#214 reports as broken, and upload its figures to imgur again.\n"
+  },
+  "repo": "https://github.com/ropensci/rentrez",
+  "pkg": "rentrez",
+  "time": "2026-10-10T13:59:26Z"
+}
