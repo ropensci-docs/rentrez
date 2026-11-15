@@ -1,0 +1,13 @@
+{
+  "commit": {
+    "commit": "6a802421c77c5ea23027e5b6fa9c5401ee69660f",
+    "author": "Samuel Bharti <samuelbharti.io@gmail.com>",
+    "time": "2026-11-15T12:18:57Z",
+    "files": 4,
+    "merge": false,
+    "message": "fix: attach the web history of a json search\n\nparse_esearch.list() read querykey and webenv from x$esearch_result,\nbut the field is esearchresult. The lookup returned NULL, so\nentrez_search(retmode = \"json\", use_history = TRUE) attached a\nweb_history with no QueryKey and no WebEnv, and gave no warning. Given\nthat history, entrez_summary() failed with \"No esummary records found\nin file\" and entrez_fetch() with HTTP 400.\n\nReading the right field fixes that. A reply that lacks either value,\nor carries an empty one, now gets the warning the xml path gives and\nno history. In the json result, file comes before web_history, as it\ndoes for xml, so both formats parse to the same fields in the same\norder. One function raises the warning in all three places that need\nit.\n\nThree offline tests in test_errors.r cover a reply with a history,\nreplies without a usable one, and the match with xml. test_webenv.r\ngains a live test that fetches records through a json history.\n"
+  },
+  "repo": "https://github.com/ropensci/rentrez",
+  "pkg": "rentrez",
+  "time": "2026-11-15T13:07:11Z"
+}
